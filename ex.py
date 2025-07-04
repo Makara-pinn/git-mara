@@ -11,9 +11,9 @@ for student in studentlist:
 template = DocxTemplate('word.docx')
 for student in studentlist[1:]:
     template.render({
-        'first_name':student[2],
-        'last_name': student[0],
-        'class':student[1],
+        'name':student[0],
+        'year': student[1],
+        
     })
     doc_name= str(student[0]) + '.docx'
     template.save(doc_name)
